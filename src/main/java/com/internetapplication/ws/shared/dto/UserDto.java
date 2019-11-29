@@ -2,12 +2,10 @@ package com.internetapplication.ws.shared.dto;
 
 import java.io.Serializable;
 import java.util.Collection;
+import java.util.List;
 
 public class UserDto implements Serializable {
 
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = -3203348416973884673L;
 	private long id;
 	private String userId;
@@ -18,7 +16,7 @@ public class UserDto implements Serializable {
 	private String encryptedPassword;
 	private String emailVerificationToken;
 	private Boolean emailVerificationStatus = false;
-	private Collection<RoleDto> roles;
+	private List<RoleDto> roles;
 
 
 	public long getId() {
@@ -97,11 +95,11 @@ public class UserDto implements Serializable {
 		return serialVersionUID;
 	}
 
-	public Collection<RoleDto> getRoles() {
+	public List<RoleDto> getRoles() {
 		return roles;
 	}
 
-	public void setRoles(Collection<RoleDto> roles) {
+	public void setRoles(List<RoleDto> roles) {
 		this.roles = roles;
 	}
 }
