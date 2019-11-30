@@ -1,7 +1,6 @@
 package com.internetapplication.ws.shared.dto;
 
 import java.io.Serializable;
-import java.util.Collection;
 import java.util.List;
 
 public class UserDto implements Serializable {
@@ -13,6 +12,8 @@ public class UserDto implements Serializable {
 	private String lastName;
 	private String email;
 	private String password;
+	private BranchDto branch;
+	private String branchId;
 	private String encryptedPassword;
 	private String emailVerificationToken;
 	private Boolean emailVerificationStatus = false;
@@ -67,6 +68,14 @@ public class UserDto implements Serializable {
 		this.password = password;
 	}
 
+	public BranchDto getBranch() {
+		return branch;
+	}
+
+	public void setBranch(BranchDto branch) {
+		this.branch = branch;
+	}
+
 	public String getEncryptedPassword() {
 		return encryptedPassword;
 	}
@@ -101,5 +110,13 @@ public class UserDto implements Serializable {
 
 	public void setRoles(List<RoleDto> roles) {
 		this.roles = roles;
+	}
+
+	public String getBranchId() {
+		return branchId;
+	}
+
+	public void setBranchId(String branchId) {
+		this.branchId = branchId;
 	}
 }

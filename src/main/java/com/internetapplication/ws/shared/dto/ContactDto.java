@@ -1,10 +1,13 @@
 package com.internetapplication.ws.shared.dto;
 
 public class ContactDto {
+
     private long id;
     private String contactId;
+    private String name;
     private String phone;
-    private BranchDto branchDto;
+    private BranchDto branch;
+    private Integer version;
 
     public long getId() {
         return id;
@@ -30,11 +33,27 @@ public class ContactDto {
         this.phone = phone;
     }
 
-    public BranchDto getBranchDto() {
-        return branchDto;
+    public BranchDto getBranch() {
+        return branch;
     }
 
-    public void setBranchDto(BranchDto branchDto) {
-        this.branchDto = branchDto;
+    public void setBranch(BranchDto branch) {
+        this.branch = branch;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Integer getVersion() {
+        return version;
+    }
+
+    public void setVersion(Integer version) {
+        this.version = version;
     }
 }

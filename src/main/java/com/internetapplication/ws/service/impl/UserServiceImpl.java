@@ -3,6 +3,7 @@ package com.internetapplication.ws.service.impl;
 import com.internetapplication.ws.io.model.Privilege;
 import com.internetapplication.ws.io.model.Role;
 import com.internetapplication.ws.io.model.UserEntity;
+import com.internetapplication.ws.io.repositories.BranchRepository;
 import com.internetapplication.ws.io.repositories.RoleRepository;
 import com.internetapplication.ws.io.repositories.UserRepository;
 import com.internetapplication.ws.service.UserService;
@@ -44,6 +45,9 @@ public class UserServiceImpl implements UserService {
 	@Autowired
 	private RoleRepository roleRepository;
 
+	@Autowired
+	private BranchRepository branchRepository;
+
 	@Override
 	public UserDto createUser(UserDto user) {
 		UserEntity userEntity = new UserEntity();
@@ -56,6 +60,8 @@ public class UserServiceImpl implements UserService {
 		userEntity.setUserId(utils.generateEntityId());
 
 		userEntity.setRoles(Arrays.asList(roleRepository.findByName("ROLE_USER")));
+
+		userEntity.setBranch(branchRepository.findByBranchId(user.getBranchId()));
 
 		UserDto returnedValue = new UserDto();
 
@@ -86,14 +92,6 @@ public class UserServiceImpl implements UserService {
 
 		return returnedValue;
 	}
-
-//	@Override
-//	public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
-//		UserEntity userEntity = userRepository.findByEmail(email);
-//		if(userEntity == null)  throw new UsernameNotFoundException(email);
-//		return new User(userEntity.getEmail(), userEntity.getEncryptedPassword(), new ArrayList<>());
-//	}
-
 
 	@Override
 	public User loadUserByUsername(String email)

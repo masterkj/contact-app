@@ -5,6 +5,7 @@ public class UserDetailsRequestModel {
 	private String lastName;
 	private String email;
 	private String password;
+	private String branchId;
 	
 	
 	public String getFirstName() {
@@ -31,6 +32,12 @@ public class UserDetailsRequestModel {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	
-	 
+
+	public String getBranchId() {
+		return branchId;
+	}
+
+	public void setBranchId(String branchId) {
+		this.branchId = branchId;
+	}
 }

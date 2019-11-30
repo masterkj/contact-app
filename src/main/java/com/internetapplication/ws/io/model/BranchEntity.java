@@ -24,8 +24,11 @@ public class BranchEntity implements Serializable {
     @Column(nullable = false, length = 40)
     private String location;
 
-    @OneToMany(mappedBy = "branchEntity", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "branch", cascade = CascadeType.ALL)
     private List<ContactEntity> contacts;
+
+    @OneToMany(mappedBy = "branchEntity", cascade = CascadeType.ALL)
+    private List<UserEntity> users;
 
     public long getId() {
         return id;
@@ -65,5 +68,13 @@ public class BranchEntity implements Serializable {
 
     public void setBranchId(String branchId) {
         this.branchId = branchId;
+    }
+
+    public List<UserEntity> getUsers() {
+        return users;
+    }
+
+    public void setUsers(List<UserEntity> users) {
+        this.users = users;
     }
 }

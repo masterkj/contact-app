@@ -6,6 +6,7 @@ public class UserRest {
 	private String firstName;
 	private String lastName;
 	private String email;
+	private String branchId;
 
 	public String getUserId() {
 		return userId;
@@ -45,5 +46,13 @@ public class UserRest {
 
 	public void setRole(int role) {
 		this.role = role;
+	}
+
+	public String getBranchId() {
+		return branchId;
+	}
+
+	public void setBranchId(String branchId) {
+		this.branchId = branchId;
 	}
 }

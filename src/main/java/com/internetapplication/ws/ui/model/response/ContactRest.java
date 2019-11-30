@@ -4,6 +4,8 @@ public class ContactRest {
     private String name;
     private String phone;
     private String contactId;
+    private String branchId;
+    private Integer version;
 
     public String getName() {
         return name;
@@ -27,5 +29,21 @@ public class ContactRest {
 
     public void setContactId(String contactId) {
         this.contactId = contactId;
+    }
+
+    public String getBranchId() {
+        return branchId;
+    }
+
+    public void setBranchId(String branchId) {
+        this.branchId = branchId;
+    }
+
+    public Integer getVersion() {
+        return version;
+    }
+
+    public void setVersion(Integer version) {
+        this.version = version;
     }
 }

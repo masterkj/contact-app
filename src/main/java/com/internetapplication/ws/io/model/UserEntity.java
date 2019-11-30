@@ -42,6 +42,10 @@ public class UserEntity implements Serializable {
                     name = "role_id", referencedColumnName = "id"))
     private Collection<Role> roles;
 
+    @ManyToOne
+    @JoinColumn(name = "branch_id")
+    private BranchEntity branchEntity;
+
     public long getId() {
         return Id;
     }
@@ -112,5 +116,13 @@ public class UserEntity implements Serializable {
 
     public void setRoles(Collection<Role> roles) {
         this.roles = roles;
+    }
+
+    public BranchEntity getBranch() {
+        return branchEntity;
+    }
+
+    public void setBranch(BranchEntity branch) {
+        this.branchEntity = branch;
     }
 }

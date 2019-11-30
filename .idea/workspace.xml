@@ -2,15 +2,43 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="69ef7c82-7780-4ab9-83a2-61409d4cc218" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/internetapplication/ws/Exceptions/AppExceptionsHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/internetapplication/ws/Exceptions/BranchNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/internetapplication/ws/Exceptions/ContactNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/internetapplication/ws/Exceptions/LostUpdatePhenomenonException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/internetapplication/ws/Exceptions/NotUserAbilitiesException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/internetapplication/ws/ui/model/response/ErrorMessage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/internetapplication/ws/InitialDataLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/Data loader/InitialDataLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/internetapplication/ws/io/model/BranchEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/internetapplication/ws/io/model/BranchEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/internetapplication/ws/io/model/ContactEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/internetapplication/ws/io/model/ContactEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/internetapplication/ws/io/model/UserEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/internetapplication/ws/io/model/UserEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/internetapplication/ws/io/repositories/ContactRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/internetapplication/ws/io/repositories/ContactRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/internetapplication/ws/service/ContactService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/internetapplication/ws/service/ContactService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/internetapplication/ws/service/impl/ContactServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/internetapplication/ws/service/impl/ContactServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/internetapplication/ws/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/internetapplication/ws/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/internetapplication/ws/shared/dto/ContactDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/internetapplication/ws/shared/dto/ContactDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/internetapplication/ws/shared/dto/UserDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/internetapplication/ws/shared/dto/UserDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/internetapplication/ws/InitialDataLoader.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/internetapplication/ws/ui/controller/ContactController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/internetapplication/ws/ui/controller/ContactController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/internetapplication/ws/ui/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/internetapplication/ws/ui/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/internetapplication/ws/ui/model/request/ContactRequestModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/internetapplication/ws/ui/model/request/ContactRequestModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/internetapplication/ws/ui/model/request/UserDetailsRequestModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/internetapplication/ws/ui/model/request/UserDetailsRequestModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/internetapplication/ws/ui/model/response/ContactRest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/internetapplication/ws/ui/model/response/ContactRest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/internetapplication/ws/ui/model/response/UserRest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/internetapplication/ws/ui/model/response/UserRest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/internetapplication/ws/io/model/BranchEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/internetapplication/ws/io/model/BranchEntity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/internetapplication/ws/io/model/ContactEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/internetapplication/ws/io/model/ContactEntity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/internetapplication/ws/io/model/UserEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/internetapplication/ws/io/model/UserEntity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/internetapplication/ws/io/repositories/ContactRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/internetapplication/ws/io/repositories/ContactRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/internetapplication/ws/service/ContactService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/internetapplication/ws/service/ContactService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/internetapplication/ws/service/impl/ContactServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/internetapplication/ws/service/impl/ContactServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/internetapplication/ws/service/impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/internetapplication/ws/service/impl/UserServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/internetapplication/ws/shared/dto/ContactDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/internetapplication/ws/shared/dto/ContactDto.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/internetapplication/ws/shared/dto/UserDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/internetapplication/ws/shared/dto/UserDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/internetapplication/ws/ui/controller/ContactController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/internetapplication/ws/ui/controller/ContactController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/internetapplication/ws/ui/model/request/ContactRequestModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/internetapplication/ws/ui/model/request/ContactRequestModel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/internetapplication/ws/ui/model/request/UserDetailsRequestModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/internetapplication/ws/ui/model/request/UserDetailsRequestModel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/internetapplication/ws/ui/model/response/ContactRest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/internetapplication/ws/ui/model/response/ContactRest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/internetapplication/ws/ui/model/response/UserRest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/internetapplication/ws/ui/model/response/UserRest.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -40,8 +68,10 @@
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\ASUS\Desktop\مشروع تطبيقات\contact-app-ws\Data loader" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\ASUS\Desktop\مشروع تطبيقات\contact-app-ws\src\main\java\com\internetapplication\ws" />
+      <recent name="C:\Users\ASUS\Desktop\مشروع تطبيقات\contact-app-ws\src\main\resources" />
+      <recent name="C:\Users\ASUS\Desktop\مشروع تطبيقات\contact-app-ws\src\main\java" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.internetapplication.ws.shared.dto" />
@@ -50,10 +80,8 @@
       <recent name="com.internetapplication.ws" />
       <recent name="com.internetapplication.ws.ui.controller" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\ASUS\Desktop\مشروع تطبيقات\contact-app-ws\src\main\java\com\internetapplication\ws" />
-      <recent name="C:\Users\ASUS\Desktop\مشروع تطبيقات\contact-app-ws\src\main\resources" />
-      <recent name="C:\Users\ASUS\Desktop\مشروع تطبيقات\contact-app-ws\src\main\java" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\ASUS\Desktop\مشروع تطبيقات\contact-app-ws\Data loader" />
     </key>
   </component>
   <component name="RunDashboard">

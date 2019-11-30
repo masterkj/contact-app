@@ -16,12 +16,19 @@ public class ContactEntity implements Serializable {
     @Column(nullable = false, unique = true)
     private String contactId;
 
+    @Column(nullable = false, length = 50)
+    private String name;
+
     @Column(nullable = false, length = 15)
     private String phone;
 
     @ManyToOne
-    @JoinColumn(name="branch_id")
-    private BranchEntity branchEntity;
+    @JoinColumn(name="branch_id", nullable = false)
+    private BranchEntity branch;
+
+    @Version
+    @Column(name = "VERSION")
+    private Integer version;
 
     public long getId() {
         return id;
@@ -47,11 +54,27 @@ public class ContactEntity implements Serializable {
         this.phone = phone;
     }
 
-    public BranchEntity getBranchEntity() {
-        return branchEntity;
+    public BranchEntity getBranch() {
+        return branch;
     }
 
-    public void setBranchEntity(BranchEntity branchEntity) {
-        this.branchEntity = branchEntity;
+    public void setBranch(BranchEntity branch) {
+        this.branch = branch;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Integer getVersion() {
+        return version;
+    }
+
+    public void setVersion(Integer version) {
+        this.version = version;
     }
 }
