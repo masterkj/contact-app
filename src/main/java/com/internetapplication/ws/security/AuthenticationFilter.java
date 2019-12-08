@@ -5,6 +5,7 @@ import com.internetapplication.ws.service.UserService;
 import com.internetapplication.ws.shared.dto.UserDto;
 import com.internetapplication.ws.ui.model.request.UserLoginRequestModel;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.internetapplication.ws.ui.model.response.LoginResponse;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -23,7 +24,7 @@ import java.util.Date;
 
 public class AuthenticationFilter extends UsernamePasswordAuthenticationFilter {
 	private final AuthenticationManager authenticationManager;
-	
+
 	public AuthenticationFilter(AuthenticationManager authenticationManager) {
 		this.authenticationManager = authenticationManager;
 	}

@@ -3,7 +3,7 @@ package com.internetapplication.ws.service.impl;
 import com.internetapplication.ws.io.model.BranchEntity;
 import com.internetapplication.ws.io.repositories.BranchRepository;
 import com.internetapplication.ws.service.BranchService;
-import com.internetapplication.ws.shared.Utils;
+import com.internetapplication.ws.shared.utils.Utils;
 import com.internetapplication.ws.shared.dto.BranchDto;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;

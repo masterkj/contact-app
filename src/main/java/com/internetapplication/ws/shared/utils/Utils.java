@@ -1,4 +1,4 @@
-package com.internetapplication.ws.shared;
+package com.internetapplication.ws.shared.utils;
 
 import org.springframework.stereotype.Component;
 

@@ -11,7 +11,7 @@ import com.internetapplication.ws.io.repositories.ContactRepository;
 import com.internetapplication.ws.io.repositories.RoleRepository;
 import com.internetapplication.ws.io.repositories.UserRepository;
 import com.internetapplication.ws.service.ContactService;
-import com.internetapplication.ws.shared.Utils;
+import com.internetapplication.ws.shared.utils.Utils;
 import com.internetapplication.ws.shared.dto.ContactDto;
 import com.internetapplication.ws.ui.model.request.ContactRequestModel;
 import org.modelmapper.ModelMapper;
@@ -154,7 +154,8 @@ public class ContactServiceImpl implements ContactService {
 
     @Override
     public void deleteContact(ContactDto contactDto) {
-        contactRepository.delete(contactRepository.findByContactId(contactDto.getContactId()));
+        ContactEntity contactEntity =contactRepository.findByContactId(contactDto.getContactId());
+        contactRepository.delete(contactEntity);
     }
 
     private void checkVersionAndBranch(List<ContactDto> contactsDto, String userBranch) {

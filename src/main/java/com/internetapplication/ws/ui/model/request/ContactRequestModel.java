@@ -5,6 +5,7 @@ public class ContactRequestModel {
     private String phone;
     private String branchId;
     private  Integer version;
+    private String contactId;
 
     public String getName() {
         return name;
@@ -36,5 +37,13 @@ public class ContactRequestModel {
 
     public void setVersion(Integer version) {
         this.version = version;
+    }
+
+    public String getContactId() {
+        return contactId;
+    }
+
+    public void setContactId(String contactId) {
+        this.contactId = contactId;
     }
 }

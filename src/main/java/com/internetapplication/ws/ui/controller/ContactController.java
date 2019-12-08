@@ -6,21 +6,33 @@ import com.internetapplication.ws.service.ContactService;
 import com.internetapplication.ws.shared.dto.BranchDto;
 import com.internetapplication.ws.shared.dto.ContactDto;
 import com.internetapplication.ws.ui.model.request.ContactRequestModel;
+import com.internetapplication.ws.ui.model.request.MergeRequestModel;
 import com.internetapplication.ws.ui.model.response.ContactRest;
-import org.modelmapper.ModelMapper;
-import org.modelmapper.TypeToken;
+import org.springframework.batch.core.Job;
+import org.springframework.batch.core.JobParameters;
+import org.springframework.batch.core.JobParametersBuilder;
+import org.springframework.batch.core.JobParametersInvalidException;
+import org.springframework.batch.core.launch.JobLauncher;
+import org.springframework.batch.core.repository.JobExecutionAlreadyRunningException;
+import org.springframework.batch.core.repository.JobInstanceAlreadyCompleteException;
+import org.springframework.batch.core.repository.JobRestartException;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
-import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
 
 @RestController
 @RequestMapping("contact")
 public class ContactController {
+
+//    @Autowired
+//    JobLauncher jobLauncher;
+//
+//    @Autowired
+//    Job exportAddressJob;
 
     @Autowired
     private
@@ -83,19 +95,36 @@ public class ContactController {
     @PostMapping(path = "/merge",
             produces = {MediaType.APPLICATION_XML_VALUE, MediaType.APPLICATION_JSON_VALUE},
             consumes = {MediaType.APPLICATION_XML_VALUE, MediaType.APPLICATION_JSON_VALUE})
-    public ContactRest mergeContacts(@RequestBody List<ContactRequestModel> contacts, @RequestBody ContactRequestModel newContact) {
+    public ContactRest mergeContacts(@RequestBody MergeRequestModel mergeRequestModel) {
         // Define the target type
-        Type targetListType = new TypeToken<List<ContactDto>>() {
-        }.getType();
+//        Type targetListType = new TypeToken<List<ContactDto>>() {
+//        }.getType();
+        List<ContactDto> contactsDto = new ArrayList<>();
 
-        ContactDto contactDto = contactService.mergeContacts(new ModelMapper().map(contacts, targetListType), newContact);
+        for(ContactRequestModel contactRequestModel: mergeRequestModel.getContacts()) {
+            ContactDto tempContactDto = new ContactDto();
+            BeanUtils.copyProperties(contactRequestModel, tempContactDto);
+            contactsDto.add(tempContactDto);
+        }
+
+        ContactDto contactDto = contactService.mergeContacts(contactsDto, mergeRequestModel.getNewContact());
 
         ContactRest returnedValue = new ContactRest();
         BeanUtils.copyProperties(contactDto, returnedValue);
 
         return returnedValue;
-
     }
+
+//    @GetMapping(path = "/export")
+//    public void exportContacts() {
+//        JobParameters jobParameters = new JobParametersBuilder().addLong("time", System.currentTimeMillis())
+//                .toJobParameters();
+//        try {
+//            jobLauncher.run(exportAddressJob, jobParameters);
+//        } catch (JobExecutionAlreadyRunningException | JobRestartException | JobInstanceAlreadyCompleteException | JobParametersInvalidException e) {
+//            e.printStackTrace();
+//        }
+//    }
 
     @DeleteMapping
     public String deleteUser() {
