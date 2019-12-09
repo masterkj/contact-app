@@ -8,14 +8,6 @@ import com.internetapplication.ws.shared.dto.ContactDto;
 import com.internetapplication.ws.ui.model.request.ContactRequestModel;
 import com.internetapplication.ws.ui.model.request.MergeRequestModel;
 import com.internetapplication.ws.ui.model.response.ContactRest;
-import org.springframework.batch.core.Job;
-import org.springframework.batch.core.JobParameters;
-import org.springframework.batch.core.JobParametersBuilder;
-import org.springframework.batch.core.JobParametersInvalidException;
-import org.springframework.batch.core.launch.JobLauncher;
-import org.springframework.batch.core.repository.JobExecutionAlreadyRunningException;
-import org.springframework.batch.core.repository.JobInstanceAlreadyCompleteException;
-import org.springframework.batch.core.repository.JobRestartException;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
@@ -71,8 +63,8 @@ public class ContactController {
             contactDto.setBranch(branchDto);
         }
 
-        ContactDto createdUser = contactService.createContact(contactDto, contactDetails.getBranchId());
-        BeanUtils.copyProperties(createdUser, returnedValue);
+        ContactDto createdContact = contactService.createContact(contactDto, contactDetails.getBranchId());
+        BeanUtils.copyProperties(createdContact, returnedValue);
 
         return returnedValue;
     }
@@ -96,9 +88,6 @@ public class ContactController {
             produces = {MediaType.APPLICATION_XML_VALUE, MediaType.APPLICATION_JSON_VALUE},
             consumes = {MediaType.APPLICATION_XML_VALUE, MediaType.APPLICATION_JSON_VALUE})
     public ContactRest mergeContacts(@RequestBody MergeRequestModel mergeRequestModel) {
-        // Define the target type
-//        Type targetListType = new TypeToken<List<ContactDto>>() {
-//        }.getType();
         List<ContactDto> contactsDto = new ArrayList<>();
 
         for(ContactRequestModel contactRequestModel: mergeRequestModel.getContacts()) {

@@ -2,40 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="69ef7c82-7780-4ab9-83a2-61409d4cc218" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Data loader/ChunksTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data loader/exportcontacts/ChunksConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data loader/exportcontacts/ContactFetcher.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data loader/exportcontacts/FileUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data loader/exportcontacts/Line.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data loader/exportcontacts/chunks/LineProcessor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data loader/exportcontacts/chunks/LinesReader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data loader/exportcontacts/chunks/LinesWriter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/internetapplication/ws/WebConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/internetapplication/ws/ui/model/request/MergeRequestModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/internetapplication/ws/ui/model/response/LoginResponse.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/internetapplication/ws/ContactAppWsApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/internetapplication/ws/ContactAppWsApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/internetapplication/ws/security/AuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/internetapplication/ws/security/AuthenticationFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/internetapplication/ws/security/WebSecurity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/internetapplication/ws/security/WebSecurity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/internetapplication/ws/service/impl/BranchServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/internetapplication/ws/service/impl/BranchServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/internetapplication/ws/service/impl/ContactServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/internetapplication/ws/service/impl/ContactServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/internetapplication/ws/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/internetapplication/ws/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/internetapplication/ws/shared/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/internetapplication/ws/shared/utils/Utils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/internetapplication/ws/service/ContactService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/internetapplication/ws/service/ContactService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/internetapplication/ws/ui/controller/BranchController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/internetapplication/ws/ui/controller/BranchController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/internetapplication/ws/ui/controller/ContactController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/internetapplication/ws/ui/controller/ContactController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/internetapplication/ws/ui/model/request/ContactRequestModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/internetapplication/ws/ui/model/request/ContactRequestModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/internetapplication/ws/ContactAppWsApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/internetapplication/ws/ContactAppWsApplication.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/internetapplication/ws/security/AuthenticationFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/internetapplication/ws/security/AuthenticationFilter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/internetapplication/ws/security/WebSecurity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/internetapplication/ws/security/WebSecurity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/internetapplication/ws/service/ContactService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/internetapplication/ws/service/ContactService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/internetapplication/ws/service/impl/BranchServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/internetapplication/ws/service/impl/BranchServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/internetapplication/ws/service/impl/ContactServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/internetapplication/ws/service/impl/ContactServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/internetapplication/ws/service/impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/internetapplication/ws/service/impl/UserServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/internetapplication/ws/shared/Utils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/internetapplication/ws/ui/controller/ContactController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/internetapplication/ws/ui/controller/ContactController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/internetapplication/ws/ui/model/request/ContactRequestModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/internetapplication/ws/ui/model/request/ContactRequestModel.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

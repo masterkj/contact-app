@@ -6,7 +6,9 @@ import com.internetapplication.ws.ui.model.request.ContactRequestModel;
 import java.util.List;
 
 public interface ContactService {
+
     ContactDto getContactByContactId(String id);
+
     List<ContactDto> getContactWithPaginate(int page);
 
     ContactDto createContact(ContactDto contactDto, String branchId);

@@ -37,7 +37,7 @@ public class BranchController {
 
     @GetMapping(produces = {MediaType.APPLICATION_XML_VALUE, MediaType.APPLICATION_JSON_VALUE})
     public String getBranches(Authentication authentication) throws Exception {
-        System.out.println(authentication.getPrincipal());
+//        System.out.println(authentication.getPrincipal());
         return authentication.getName();
     }
 
@@ -46,7 +46,7 @@ public class BranchController {
     @DeleteMapping(produces = {MediaType.APPLICATION_XML_VALUE, MediaType.APPLICATION_JSON_VALUE},
             consumes = {MediaType.APPLICATION_XML_VALUE, MediaType.APPLICATION_JSON_VALUE},
             path="/{id}")
-    public OperationStatusModel deleteUser(@PathVariable String id) {
+    public OperationStatusModel deleteBranch(@PathVariable String id) {
         OperationStatusModel operationStatusModel = new OperationStatusModel();
         operationStatusModel.setOperationResult(RequestOperationStatus.DELETE.name());
 

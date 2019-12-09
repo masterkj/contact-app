@@ -1,5 +1,6 @@
 package com.internetapplication.ws.security;
 
+import com.google.gson.Gson;
 import com.internetapplication.ws.SpringApplicationContext;
 import com.internetapplication.ws.service.UserService;
 import com.internetapplication.ws.shared.dto.UserDto;
@@ -19,6 +20,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -63,10 +65,20 @@ public class AuthenticationFilter extends UsernamePasswordAuthenticationFilter {
 
 		UserService userService = (UserService) SpringApplicationContext.getBean("userServiceImpl");
 		UserDto userDto = userService.getUser(userName);
+
+		PrintWriter out = res.getWriter();
+		res.setContentType("application/json");
+		res.setCharacterEncoding("UTF-8");
+
+
+		String accessToken = SecurityConstance.TOKEN_PREFIX + token;
+		String loginResponseString = new Gson().toJson(new LoginResponse(token, userDto.getUserId()) );
+		out.print(loginResponseString);
+		out.flush();
 				
-		res.addHeader(SecurityConstance.HEADER_STRING, SecurityConstance.TOKEN_PREFIX + token);
-		res.addHeader("UserID", userDto.getUserId());
-		
+//		res.addHeader(SecurityConstance.HEADER_STRING, SecurityConstance.TOKEN_PREFIX + token);
+//		res.addHeader("UserID", userDto.getUserId());
+
 	}
 
 	
